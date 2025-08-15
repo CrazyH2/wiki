@@ -1,9 +1,10 @@
 name: Deploy
 
 on:
+  workflow_dispatch
   push:
-    tags:
-      - v[0-9]+.[0-9]+.[0-9]+
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -25,13 +26,6 @@ jobs:
 
       - run: pnpm build
 
-      - name: Update CHANGELOG
-        id: changelog
-        uses: requarks/changelog-action@v1
-        with:
-          token: ${{ github.token }}
-          tag: ${{ github.ref_name }}
-
       - name: Create Release
         uses: ncipollo/release-action@v1.14.0
         with:
@@ -41,7 +35,7 @@ jobs:
           name: ${{ github.ref_name }}
           body: ${{ steps.changelog.outputs.changes }}
           token: ${{ github.token }}
-          
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
