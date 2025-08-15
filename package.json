@@ -1,0 +1,17 @@
+{
+  "name": "wiki",
+  "version": "1.0.0",
+  "description": "A wiki for Bigstone and our datapack!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "author": "BigstoneDevelopment",
+  "license": "CC-BY-NC-SA-4.0",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.18"
+  }
+}
