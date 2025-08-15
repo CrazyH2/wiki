@@ -1,4 +1,4 @@
-# Bigstone Wiki<br>Standards and Guides
+# Bigstone Wiki<br>Standards and Guides 
 ### **Make your components compliant in minutes!**
 
 [wiki.bigstone.dev](https://wiki.bigstone.dev)
